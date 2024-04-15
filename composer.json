@@ -1,5 +1,5 @@
 {
-	"name": "kdyby/doctrine-dbal-batchimport",
+	"name": "antstudiocz/doctrine-dbal-batchimport",
 	"type": "library",
 	"description": "Batch import & execute utils for effective processing of SQL Imports from files and strings",
 	"keywords": ["kdyby", "doctrine", "dbal", "import", "sql", "query", "batch", "execute"],
