@@ -30,7 +30,7 @@ class Helpers
 	 */
 	public static function executeBatch(Connection $connection, $query, $callback = NULL)
 	{
-		$db = $connection->getWrappedConnection();
+		$db = $connection->getNativeConnection();
 
 		$delimiter = ';';
 		$offset = 0;
@@ -58,7 +58,7 @@ class Helpers
 						$db->exec($q);
 
 					} catch (\Exception $e) {
-						throw new BatchImportException($sql, $e->getMessage(), 0, $e);
+						throw new BatchImportException($q, $e->getMessage(), 0, $e);
 					}
 
 					$query = substr($query, $offset);
